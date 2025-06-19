@@ -1,0 +1,38 @@
+interface Insurance {
+    void getPolicyDetails();
+    double calculatePremium();
+}
+
+class HealthInsurance implements Insurance {
+    private String policyHolderName;
+    private int age;
+    private double baseAmount;
+
+    HealthInsurance(String name, int age, double baseAmount) {
+        this.policyHolderName = name;
+        this.age = age;
+        this.baseAmount = baseAmount;
+    }
+
+    public void getPolicyDetails() {
+        System.out.println("Policy Holder: " + policyHolderName);
+        System.out.println("Age: " + age);
+        System.out.println("Base Amount: ₹" + baseAmount);
+    }
+
+    public double calculatePremium() {
+        if (age < 30) {
+            return baseAmount * 0.05;
+        } else {
+            return baseAmount * 0.1;
+        }
+    }
+}
+
+public class Example {
+    public static void main(String[] args) {
+        HealthInsurance policy = new HealthInsurance("Rahul", 28, 500000);
+        policy.getPolicyDetails();
+        System.out.println("Calculated Premium: ₹" + policy.calculatePremium());
+    }
+}
