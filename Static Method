@@ -1,0 +1,15 @@
+public class xyz {
+    static{
+        System.out.println("We are in static");
+    }
+    {
+        System.out.println("We are in instance");
+    }
+    xyz(){
+        System.out.println("We are in constructor");
+    }
+    public static void main(String arg[]){
+        new xyz();
+        new xyz();
+    }
+}
