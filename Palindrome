@@ -1,0 +1,15 @@
+public class Program {
+    public static void main(String[] args) {
+        int num = 141;
+        int x = 0;
+        int n = num; 
+
+        while (n > 0) {
+            int digit = n % 10;
+            x = x * 10 + digit;
+            n = n / 10;
+        }
+
+        System.out.println(x);
+    }
+}
