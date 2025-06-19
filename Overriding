@@ -1,0 +1,25 @@
+class parent{
+    String str = "Parent";
+    public void message(String name){
+        System.out.println("parent x "+name);
+    }
+}
+
+class child extends parent{
+    String str = "Child";
+    public void message(String name){
+        System.out.println("Welcome to child "+name);
+    }
+}
+
+public class Inheritance {
+    public static void main(String[] args) {
+        parent p = new child();
+        p.message("abc");
+        System.out.println(p.str);
+        child c = new child();
+        System.out.println(c.str);
+    }
+}
+
+//can't override variables because it method overriding not variable
